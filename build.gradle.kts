@@ -56,7 +56,7 @@ dependencies {
 
     }
     implementation("org.apache.opennlp:opennlp-tools:1.9.3")
-
+implementation 'com.google.cloud:google-cloud-language:2.4.0'
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
