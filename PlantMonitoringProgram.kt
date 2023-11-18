@@ -93,6 +93,7 @@ private lateinit var plant2DataTextView:TextView
         e.printStackTrace()
         return "Error analyzing sentiment."
     }        }
+}
     
 
 
