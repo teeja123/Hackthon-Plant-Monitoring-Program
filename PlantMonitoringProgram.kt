@@ -78,15 +78,22 @@ private lateinit var plant2DataTextView:TextView
 
         // Function to simulate sentiment analysis
         private fun analyzeSentiment(plant: Plant): String {
-            val random = Random()
-            val sentimentScore = random.nextInt(100) // Simulated sentiment score
-            return if (sentimentScore >= 50) {
-                "${plant.name}'s energy levels are positive."
-            } else {
-                "${plant.name}'s energy levels are negative."
-            }
+         try {
+        val languageServiceClient = LanguageServiceClient.create()
+        val document = Document.newBuilder().setContent("${plant.name}'s energy levels are positive.").setType(Document.Type.PLAIN_TEXT).build()
+        val sentiment = languageServiceClient.analyzeSentiment(document).sentiment.score
+        languageServiceClient.close()
+
+        return if (sentiment >= 0) {
+            "${plant.name}'s energy levels are positive."
+        } else {
+            "${plant.name}'s energy levels are negative."
         }
-    }
+    } catch (e: IOException) {
+        e.printStackTrace()
+        return "Error analyzing sentiment."
+    }        }
+    
 
 
 
