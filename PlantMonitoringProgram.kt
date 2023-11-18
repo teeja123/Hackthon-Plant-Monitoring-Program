@@ -30,8 +30,11 @@ private lateinit var plant2DataTextView:TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+                    val serviceAccountKeyPath = "path/to/your/service_account_key.json"
+        val credentials = GoogleCredentials.fromStream(FileInputStream(serviceAccountKeyPath))
 
-                    super.onCreate(savedInstanceState)
+        // Create a LanguageServiceClient using the loaded credentials
+        val languageServiceClient = LanguageServiceClient.fromCredentials(credentials)                    super.onCreate(savedInstanceState)
             setContentView(R.layout.layout)
 
             // Create Plant1
