@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/comparisonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Comparison Result"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sentimentTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comparisonTextView"
+        android:layout_marginTop="20dp"
+        android:text="Sentiment Result 1"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sentimentTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sentimentTextView1"
+        android:layout_marginTop="20dp"
+        android:text="Sentiment Result 2"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/plant1DataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sentimentTextView2"
+        android:layout_marginTop="20dp"
+        android:text="Plant1 Data"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/plant2DataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plant1DataTextView"
+        android:layout_marginTop="20dp"
+        android:text="Plant2 Data"
+        android:textSize="18sp" />
+
+
+
+
+</RelativeLayout>
+
+
+
